@@ -1,0 +1,186 @@
+/* style.css */
+
+/* Variables de color */
+:root {
+    --color-bg: #FFFDEF;
+    --color-light: #F1F1F1;
+    --color-primary: #E70000;
+    --color-accent: #C50000;
+    --text-dark: #333;
+    --text-light: #fff;
+  }
+  
+  /* General */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Navbar */
+  nav {
+    background-color: var(--color-primary);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 0.8s ease;
+  }
+  
+  @keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+  }
+  
+  nav .logo {
+    height: 40px;
+  }
+  
+  .navbar-links a {
+    color: var(--text-light);
+    margin-left: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  .navbar-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--text-light);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+  }
+  
+  .navbar-links a:hover::after {
+    width: 100%;
+  }
+  
+  /* Hero */
+  .hero {
+    background-color: var(--color-light);
+    text-align: center;
+    padding: 4rem 2rem;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .hero h1 {
+    color: var(--color-accent);
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .marca-personal {
+    font-style: italic;
+    color: var(--color-primary);
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Sections */
+  .content {
+    padding: 3rem 2rem;
+    animation: fadeIn 1.5s ease;
+  }
+  
+  .case-study {
+    margin-bottom: 4rem;
+  }
+  
+  .case-study h3 {
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+  }
+  
+  .case-study h3:hover {
+    transform: scale(1.05);
+  }
+  
+  .image-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+  
+  .image-container img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.05);
+  }
+  
+  .dots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  
+  .dots a {
+    background-color: var(--color-primary);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .dots a:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--color-primary);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    animation: fadeIn 2s ease;
+  }
+  
+  footer a {
+    color: var(--text-light);
+    margin: 0 0.5rem;
+    text-decoration: underline;
+  }
+  
